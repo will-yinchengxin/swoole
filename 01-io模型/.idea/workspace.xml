@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e189d6e5-6260-4fe0-875b-dbbf0e705bb3" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="D:/phpstudy/ide-helper-master" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1dsqF7Un6Ax9vX7ysjoncIPiDqM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Reactor/Swoole/MulitTask" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\io\src\Reactor\Swoole\MulitTask" />
+      <recent name="C:\Users\Administrator\Desktop\io\src" />
+      <recent name="C:\Users\Administrator\Desktop\io\test\reactor\mulitplus" />
+      <recent name="C:\Users\Administrator\Desktop\io\test\reactor\multi" />
+      <recent name="C:\Users\Administrator\Desktop\io\test\reactor" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\io\test\reactor\mulitplus" />
+      <recent name="C:\Users\Administrator\Desktop\io\src\Reactor\Swoole\MulitPlus" />
+      <recent name="C:\Users\Administrator\Desktop\io\test\singnal-driven" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e189d6e5-6260-4fe0-875b-dbbf0e705bb3" name="Default Changelist" comment="" />
+      <created>1593224041257</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593224041257</updated>
+      <workItem from="1593224042595" duration="15769000" />
+      <workItem from="1593309233998" duration="9867000" />
+      <workItem from="1593391414973" duration="19306000" />
+      <workItem from="1593499964862" duration="3102000" />
+      <workItem from="1593568950241" duration="24123000" />
+      <workItem from="1593650673697" duration="6799000" />
+      <workItem from="1593770260346" duration="679000" />
+      <workItem from="1593824791662" duration="18237000" />
+      <workItem from="1593867266257" duration="5020000" />
+      <workItem from="1593912696962" duration="16132000" />
+      <workItem from="1594000069866" duration="6058000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="27" key="#Deployment" timestamp="1593867482597">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="27" key="#Deployment/0.0.1366.738@0.0.1366.738" timestamp="1593867482597" />
+    <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1593596492463">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1593596492463" />
+    <state x="92" y="92" width="1182" height="554" key="DiffContextDialog" timestamp="1593594628227">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="92" y="92" width="1182" height="554" key="DiffContextDialog/0.0.1366.738@0.0.1366.738" timestamp="1593594628227" />
+    <state x="92" y="92" width="1182" height="554" key="DirDiffDialog" timestamp="1593866624008">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="92" y="92" width="1182" height="554" key="DirDiffDialog/0.0.1366.738@0.0.1366.738" timestamp="1593866624008" />
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1593500011253">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1593500011253" />
+    <state x="487" y="209" key="GrepConsoleSound" timestamp="1594007202122">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="487" y="209" key="GrepConsoleSound/0.0.1366.738@0.0.1366.738" timestamp="1594007202122" />
+    <state x="499" y="292" key="NewPhpFileDialog" timestamp="1593954717269">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="499" y="292" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1593954717269" />
+    <state x="184" y="11" key="SettingsEditor" timestamp="1593500017728">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="184" y="11" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1593500017728" />
+    <state x="472" y="99" key="ftp.server.browser" timestamp="1593867480822">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="472" y="99" key="ftp.server.browser/0.0.1366.738@0.0.1366.738" timestamp="1593867480822" />
+    <state x="382" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1593438339592">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="382" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1593438339592" />
+  </component>
+</project>

@@ -1,0 +1,30 @@
+{
+    "name": "willyin/swoole_frame",
+    "description": "this is the swoole frame",
+    "type": "library",
+    "authors": [
+        {
+            "name": "will",
+            "email": "826895143@qq.com"
+        }
+    ],
+    "require": {
+        "willyin/swoole_work": "dev-master"
+    },
+    "repositories": {
+        "will": {
+            "type": "path",
+            "url": "../swoole_work"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\":"app/",
+            "Database\\": "database/",
+            "Test\\" : "test/"
+        },
+        "files": [
+            "vendor/willyin/swoole_work/src/Support/Helper.php"
+        ]
+    }
+}

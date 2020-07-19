@@ -1,0 +1,26 @@
+[
+    {
+        "name": "willyin/swoole_work",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "dist": {
+            "type": "path",
+            "url": "../swoole_work",
+            "reference": "6314a292b16fd59fcb32e13a9a2965544a211a24"
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SwooleWork\\": "./src/"
+            }
+        },
+        "authors": [
+            {
+                "name": "will",
+                "email": "826895143@qq.com"
+            }
+        ],
+        "description": "this is a work place for swoole"
+    }
+]

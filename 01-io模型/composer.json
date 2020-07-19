@@ -1,0 +1,20 @@
+{
+    "name": "willyin/io",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "will",
+            "email": "826895143@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Willyin\\Io\\": "./src/"
+        },
+        "files":[
+            "src/Helper.php"
+        ]
+    },
+    "require": {}
+}

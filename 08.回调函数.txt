@@ -1,0 +1,138 @@
+                                            关于回调函数
+1.概念
+ 回调函数是指 使用者自己定义一个函数，实现这个函数的程序内容，然后把这个函数（入口地址）作为参数传入别人（或系统）的函数中，由别人（或系统）的函数在运行时来调用的函数。函数是你实现的，但由别人（或系统）的函数在运行时通过参数传递的方式调用，这就是所谓的回调函数。简单来说，当发生某种事件时，系统或其他函数将会自动调用你定义的一段函数。
+
+回调函数就是在给一个函数传入一个简单的参数无法解决问题的时候给他传入一个过程,从而达到目的
+
+    1.1实例:
+        1.1.1  call_user_func                     把第一个参数作为回调函数调用
+            function f1($arg1,$arg2)
+            {
+              echo 'this is a test for call_user_func:'.$arg1.' '.$arg2."\r\n";
+            }
+            //通过call_user_func调用函数f1
+
+            call_user_func('f1','han','wen');
+            //结果: this is a test for call_user_func:han wen
+
+        1.1.2  call_user_func_array               调用回调函数，并把一个数组参数作为回调函数的参数
+            function foobar($arg, $arg2) {
+                echo __FUNCTION__, " got $arg and $arg2\n";
+            }
+            class foo {
+                function bar($arg, $arg2) {
+                    echo __METHOD__, " got $arg and $arg2\n";
+                }
+            }
+
+            call_user_func_array("foobar", array("one", "two"));
+
+            $foo = new foo;
+            call_user_func_array(array($foo, "bar"), array("three", "four"));
+
+           // foobar got one and two
+           // foo::bar got three and four
+
+        1.1.3完整实例:
+            //rule1除去数组中是三的倍数的数
+            function rule1($a){
+                if ($a%3==0){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            //rule2是除去数组中的回文数（从左边读与从右边读是一样的）
+            function rule2($a){
+                if ($a==strrev($a)){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            function demo($n,$var){
+                for ($i=0;$i<$n;$i++){
+                    if (call_user_func_array($var,array(23)))
+                    //if ($var($i))
+                    {
+                        continue;
+                    }else{
+                        echo $i."<br>";
+                    }
+                }
+            }
+            $var="rule1";
+            demo(100,$var);
+            echo "</br>";
+            echo "<hr>";
+            $var="rule2";
+            demo(200,$var);
+            echo "</br>";
+
+        1.1.4
+        <?php
+        Class A{
+            public function index(){
+                echo "this is index";
+            }
+            public function call_back(){
+                call_user_func([$this,'index']);
+            }
+        }
+        (new A)->call_back();
+
+        结果:
+        [root@localhost ~]# php test.php
+        this is index
+
+
+                                关于匿名函数(闭包函数)
+2.1 概念(php.net/manual/zh/functions.anonymous.php):
+闭包是可以包含自由（未绑定到特定对象）变量的代码块；这些变量不是在这个代码块内或者任何全局上下文中定义的，而是在定义代码块的环境中定义（局部变量）,子函数可以使用父函数中的局部变量，这种行为就叫做闭包。
+
+理论上讲,闭包和匿名函数是不同的概念. 不过,PHP将其视作相同的概念.
+
+2.2
+    //例一：把匿名函数当做参数传递，并且调用它
+    function callFunc( $func ) {
+      $func( "some string\r\n" );
+    }
+    $printStrFunc = function( $str ) {
+      echo $str;
+    };
+
+    //例二：也可以直接将匿名函数进行传递。如果你了解js，这种写法可能会很熟悉
+    callFunc( $printStrFunc );
+    callFunc( function( $str ) {
+      echo $str;
+    } );
+
+    //例三：在匿名函数中改变上下文的变量
+    function getMoney() {
+      $rmb = 1;
+      $func = function() use ( &$rmb ) {
+       echo $rmb . "<br>";
+         //把$rmb的值加1
+       $rmb++;
+     };
+     $func();
+     echo $rmb;
+    }
+    getMoney();
+    //输出：
+    //1
+    //2
+
+   //例四:
+    $message = 'hello';
+    $example = function ($arg) {
+        var_dump($arg );
+    };
+    $example("hello");   // 输出hello
+
+    //例五:
+    $message = 'world';
+        $example = function ($arg) use($message) {
+           var_dump($arg . ' ' . $message);
+        };
+    $example("hello");   // 输出 hello world

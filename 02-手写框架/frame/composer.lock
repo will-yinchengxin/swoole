@@ -1,0 +1,42 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "633f3404cf6e7de994e4e5d9cf2afe90",
+    "packages": [
+        {
+            "name": "willyin/swoole_work",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../swoole_work",
+                "reference": "6314a292b16fd59fcb32e13a9a2965544a211a24"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SwooleWork\\": "./src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "will",
+                    "email": "826895143@qq.com"
+                }
+            ],
+            "description": "this is a work place for swoole"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "willyin/swoole_work": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

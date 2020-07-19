@@ -1,0 +1,29 @@
+{
+    "name": "willyin/swocloud",
+    "description": "this is IM frame",
+    "type": "library",
+    "authors": [
+        {
+            "name": "will",
+            "email": "826895143@qq.com"
+        }
+    ],
+    "require": {
+        "willyin/swoole_work": "dev-master",
+        "firebase/php-jwt": "^5.2"
+    },
+    "repositories": {
+        "will": {
+            "type": "path",
+            "url": "../swoole_work"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "SwoCloud\\":"src/"
+        },
+        "files": [
+            "vendor/willyin/swoole_work/src/Support/Helper.php"
+        ]
+    }
+}

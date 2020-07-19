@@ -1,0 +1,96 @@
+<?php
+class ChanGroup
+{
+    private $chan;
+    //记录协程的个数
+    private $count;
+
+    //先进行chan类的new
+    public function __construct(){
+      $this->chan = new chan();
+    }
+
+    //记录增加的协程的个数
+    public function add_count(){
+       $this->count++;
+    }
+
+   //消息的推送
+    public function res_push($data){
+       $this->chan->push($data);
+    }
+
+    //结果的输出
+    public function res_pop(){
+      $result = [];
+      for($i = 0 ; $i < $this->count ; $i++){
+          $result[]= $this->chan->pop();
+      }
+      return $result;
+    }
+}
+
+------------------------------------------------------------------使用--------------------------------------------------------
+$http = new Swoole\Http\Server("0.0.0.0", 9501);
+$http->on('request', function ($request, $response) {
+    //解决两次请求问题
+    if ($request->server['path_info'] == '/favicon.ico' || $request->server['request_uri'] == '/favicon.ico') {
+            $response->end();
+            return;
+        }
+
+    $newTime = time();
+
+    //使用封装的方法
+    $chan = new ChanGroup;
+    $chan->add_count();
+
+    //第一个连接
+    go(function() use ($chan){
+        $mysql1 = new Swoole\Coroutine\MySQL();
+        $res1 = $mysql1->connect([
+            'host' => '192.168.100.151',
+            'user' => 'will',
+            'password' => '123456',
+            'database' => 'will',
+        ]);
+
+        if ($res1 == false) {
+            return;
+        }
+        // 延迟收包
+        $mysql1->setDefer();
+        $mysql1->query('select sleep(1)');
+        // 把数据放到通道中
+        //$chan->push($mysql1->recv()) ;
+        $chan->res_push($mysql1->recv());
+      });
+
+
+    $chan->add_count();
+    //第二次请求
+    go(function() use ($chan){
+        $mysql2 = new Swoole\Coroutine\MySQL();
+        $res2 = $mysql2->connect([
+            'host' => '192.168.100.151',
+            'user' => 'will',
+            'password' => '123456',
+            'database' => 'will',
+        ]);
+        // 延迟收包
+        $mysql2->setDefer();
+        // 把数据放到通道中
+        $mysql2->query('select count(*) from user_info');
+
+        $chan->res_push($mysql2->recv()) ;
+    });
+
+     //使用封装方法输出结果
+     $res = $chan->res_pop();
+     var_dump($res);
+
+    $all_time = time()-$newTime;
+    var_dump('完成需要的时间:'.$all_time."\n");
+});
+
+$http->start();

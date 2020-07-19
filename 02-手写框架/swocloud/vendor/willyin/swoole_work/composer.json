@@ -1,0 +1,20 @@
+{
+    "name": "willyin/swoole_work",
+    "description": "this is a work place for swoole",
+    "type": "library",
+    "authors": [
+        {
+            "name": "will",
+            "email": "826895143@qq.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "SwooleWork\\":"./src/"
+        },
+        "files": [
+            "src/Support/Helper.php"
+        ]
+    }
+}
